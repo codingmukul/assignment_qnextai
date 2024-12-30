@@ -49,7 +49,7 @@ pip install -r requirements.txt
 ### 4. Set Up Environment Variables
 You'll need to set up the API key for the Generative AI model (e.g., Gemini 1.5 Flash). Store it in an `.env` file:
 ```env
-GENAI_API_KEY=your_api_key_here
+GEMINI_API_KEY=your_api_key_here
 ```
 
 ### 5. Run the Application
