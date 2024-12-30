@@ -86,6 +86,21 @@ def summarize_transcript(transcript_text):
     return handle_empty_or_invalid_response(response.text.strip())
 
 
+# Home Route
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "Welcome to the Earnings Transcript Summary API!",
+        "usage": {
+            "endpoint": "/earnings_transcript_summary",
+            "method": "POST",
+            "example_input": {
+                "company_name": "Reliance Industries",
+                "transcript_text": "YOUR TRANSCRIPT TEXT HERE"
+            }
+        }
+    })
+
 # Route to summarize the earnings call transcript
 @app.route('/earnings_transcript_summary', methods=['POST'])
 def earnings_transcript_summary():
